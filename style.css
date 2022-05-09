@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(https://cdn.wallpapersafari.com/16/47/4iXrmA.jpg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.keyboard-textarea {
+  font-size: 20px;
+  width: 50vw;
+  height: 18vh;
+  margin-top: 3%;
+  margin-left: 25%;
+  resize: none;
+  background-color: rgb(122, 54, 178);
+  opacity: 0.8;
+  color: #fff;
+  font-size: 600%;
+}
+
+.keyboard {
+  width: 100vw;
+  height: 50vh;
+  min-height: 255px;
+  position: fixed;
+  bottom: 0;
+}
+
+.keyboard__keys {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.keyboard__key {
+  height: 45px;
+  width: 6%;
+  max-width: 45px;
+  margin: 3px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  position: relative;
+  background-color: rgb(122, 54, 178);
+  color: #fff;
+  opacity: 0.8;
+}
+.keyboard__key.keyboard__key_extra-wide {
+  width: 20%;
+  max-width: 500px;
+}
+.keyboard__key.keyboard__key_wide {
+  width: 6%;
+  max-width: 90px;
+}
+.keyboard__key.keyboard__key_activatable::after {
+  content: "";
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: #fff;
+}
+.keyboard__key.active::after {
+  content: "";
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: #11ff00;
+}
+.keyboard__key:hover {
+  cursor: pointer;
+}
+
+.pressed {
+  background-color: #280524;
+  box-shadow: 0 1px #491c47;
+  transform: translateY(1px);
+}
